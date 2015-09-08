@@ -6,8 +6,9 @@ from flask import Config
 
 
 class DevelopmentConfig(Config):
-    DB_HOST = 'localhost'
-    DB_PORT = '5432'
-    DB_USER = ''
-    DB_PASSWORD = ''
-    DB_NAME = ''
+    MONGODB_DATABASE = 'tweenyapp'
+    MONGODB_HOST = 'localhost'
+    MONGODB_PORT = 27017
+    MONGODB_USERNAME = ''
+    MONGODB_PASSWORD = ''
+
