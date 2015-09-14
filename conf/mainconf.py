@@ -9,6 +9,7 @@ class DevelopmentConfig(Config):
     MONGODB_DATABASE = 'tweenyapp'
     MONGODB_HOST = 'localhost'
     MONGODB_PORT = 27017
-    MONGODB_USERNAME = ''
-    MONGODB_PASSWORD = ''
+    MONGODB_USERNAME = 'tweeny'
+    MONGODB_PASSWORD = 'tweeny02'
+
 

@@ -30,4 +30,6 @@ print db
 """Set the app secret to use sessions """
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
-from api.controllers import outlets
+
+#import the dependencies
+import api
