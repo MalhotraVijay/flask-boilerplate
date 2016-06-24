@@ -23,12 +23,13 @@ logger.setLevel('DEBUG')
 
 
 """ Initiating mongodb db object """
-db = MongoKit(app)
 
-print db
+#uncomment to connect to db
+#db = MongoKit(app)
+
 
 """Set the app secret to use sessions """
-app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmladjfKsj$kjd'
 
 
 #import the dependencies

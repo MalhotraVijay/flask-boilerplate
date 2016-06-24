@@ -1,6 +1,26 @@
-Tweeny API
+# Flask Boilerplate
 
-Server API for tweeny for the app to interact with the data.
+Flask Boilerplate to get started with flask applications. This is configured with Flask and Mongokit.
+This will help get flask app up and running within seconds. 
 
-The API is written in Flask and uses MongoDb as the backend engine.
 
+Flask is a microframework for Python based on Werkzeug and Jinja2.
+
+
+### Installation
+
+```sh
+$ git clone https://github.com/MalhotraVijay/flask-boilerplate.git
+```
+
+```sh
+$ cd flask-boilerplate
+```
+
+```sh
+$ pip install -r requirements.txt
+```
+
+```sh
+$ python server.py
+```
