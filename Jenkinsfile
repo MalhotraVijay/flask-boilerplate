@@ -12,9 +12,10 @@ node {
       stage('Build') {
           try {
               sh '''#!/bin/bash
-                echo hello $(env.BRANCH_NAME)
+                echo hello ${env.BRANCH_NAME}
               '''
-              if($(env.BRANCH_NAME == "master"){
+              echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} with ${env.BRANCH_NAME}"
+              if(${env.BRANCH_NAME} == "master"){
                 sh '''
                     echo I am performing further
                 ''''
