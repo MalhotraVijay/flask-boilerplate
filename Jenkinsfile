@@ -18,13 +18,19 @@ node {
               if(${env.BRANCH_NAME} == "master"){
                 sh '''
                     echo I am performing further
-                ''''
+                '''
               }
           } catch (exc) {
               echo "Error when waiting for user input to promote to production. ${exc}"
               throw exc
           }
       }
+
+      if(${env.BRANCH_NAME} == "master"){
+        currentBuild.result = 'SUCCESS'
+        return
+      }
+
       stage('Test'){
           try{
               echo "In the test branch"
