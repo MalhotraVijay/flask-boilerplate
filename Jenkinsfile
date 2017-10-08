@@ -28,12 +28,12 @@ node {
           }
       }
 
-      script {
-        if(env.BRANCH_NAME == "master"){
-            currentBuild.result = 'SUCCESS'
-            return
-        }
-      }
+       if(env.BRANCH_NAME == "master"){
+           echo "Found master here and excluding"
+           currentBuild.result = 'SUCCESS'
+           return
+       }
+      
 
       stage('Test'){
           try{
