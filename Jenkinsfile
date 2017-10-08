@@ -34,7 +34,12 @@ node {
            return
        }
       
-
+      when {
+          branch 'master'
+          echo 'Master found'
+          currentBuild.result = 'SUCCESS'
+          return
+      }
       stage('Test'){
           try{
               echo "In the test branch"
