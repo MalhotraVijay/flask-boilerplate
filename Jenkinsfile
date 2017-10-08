@@ -15,10 +15,12 @@ node {
                 echo hello
               '''
               echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} with ${env.BRANCH_NAME}  or this ${BRANCH_NAME}"
-              if(env.BRANCH_NAME == "master"){
-                sh '''
-                    echo I am performing further
-                '''
+              script{
+                if(env.BRANCH_NAME == "master"){
+                    sh '''
+                        echo I am performing further
+                    '''
+                }
               }
           } catch (exc) {
               echo "Error when waiting for user input to promote to production. ${exc}"
