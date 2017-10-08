@@ -14,7 +14,7 @@ node {
               sh '''#!/bin/bash
                 echo hello
               '''
-              echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} with ${env.BRANCH_NAME}  or this ${BRANCH_NAME}"
+              echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} with ${env.BRANCH_NAME} "
               script{
                 if(env.BRANCH_NAME == "master"){
                     sh '''
