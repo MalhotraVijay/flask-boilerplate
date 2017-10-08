@@ -15,7 +15,7 @@ node {
                 echo hello
               '''
               echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} with ${env.BRANCH_NAME}"
-              if(${env.BRANCH_NAME} == "master"){
+              if(env.BRANCH_NAME == "master"){
                 sh '''
                     echo I am performing further
                 '''
@@ -26,7 +26,7 @@ node {
           }
       }
 
-      if(${env.BRANCH_NAME} == "master"){
+      if(env.BRANCH_NAME == "master"){
         currentBuild.result = 'SUCCESS'
         return
       }
