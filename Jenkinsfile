@@ -28,8 +28,8 @@ node {
           }
       }
 
-       if(env.BRANCH_NAME == "master"){
-           echo "Found master here and excluding, removed when"
+       if(env.BRANCH_NAME != "master"){
+           echo "Found branch ${env.BRANCH_NAME}  here and exiting after build"
            currentBuild.result = 'SUCCESS'
            return
        }
