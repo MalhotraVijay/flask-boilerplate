@@ -29,17 +29,11 @@ node {
       }
 
        if(env.BRANCH_NAME == "master"){
-           echo "Found master here and excluding"
+           echo "Found master here and excluding, removed when"
            currentBuild.result = 'SUCCESS'
            return
        }
       
-      when {
-          branch 'master'
-          echo 'Master found'
-          currentBuild.result = 'SUCCESS'
-          return
-      }
       stage('Test'){
           try{
               echo "In the test branch"
