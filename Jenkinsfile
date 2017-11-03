@@ -1,5 +1,12 @@
 #!/usr/bin/env groovy
 
+def deployfunc(dep){
+    echo dep
+    sh '''#/bin/bash 
+        echo ${dep} 
+    '''
+}
+
 node {
     try {
         properties([
@@ -32,6 +39,12 @@ node {
                         throw exc
                 }
             }
+
+
+            stage('Test fucntion'){
+                   deployfunc('int')
+            }
+        
 
         if(build_image_only){
             echo "Building only image and now exiting"
