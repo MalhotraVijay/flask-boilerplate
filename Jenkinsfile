@@ -2,9 +2,9 @@
 
 def deployfunc(value){
     echo BRANCH_TEST
-    sh '''#/bin/bash 
+    sh "#/bin/bash 
         echo here "$BRANCH_TEST" "$value"
-    '''
+    "
 
     sh "echo try $BRANCH_TEST $value "
 }
