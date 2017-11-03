@@ -1,12 +1,13 @@
 #!/usr/bin/env groovy
 
-def deployfunc(dep){
-    echo dep
+def deployfunc(){
+    echo BRANCH_TEST
     sh '''#/bin/bash 
-        echo ${dep} 
+        echo here ${BRANCH_TEST} 
     '''
 }
 
+BRANCH_TEST = 'int'
 node {
     try {
         properties([
@@ -42,7 +43,8 @@ node {
 
 
             stage('Test fucntion'){
-                   deployfunc('int')
+                BRANCH_TEST = 'stg'
+                deployfunc()
             }
         
 
