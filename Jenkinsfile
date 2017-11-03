@@ -2,9 +2,10 @@
 
 def deployfunc(value){
     echo BRANCH_TEST
-    sh "#/bin/bash 
-        echo here "$BRANCH_TEST" "$value"
-    "
+    sh "export DEP_ENV=$BRANCH_TEST"
+    sh '''#/bin/bash 
+        echo here ${DEP_ENV}
+    '''
 
     sh "echo try $BRANCH_TEST $value "
 }
